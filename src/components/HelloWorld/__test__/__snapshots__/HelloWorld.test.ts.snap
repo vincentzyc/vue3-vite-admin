@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`hello world mount 1`] = `
+"<div>4 x 2 = 8</div>
+<button class=\\"el-button el-button--primary\\" aria-disabled=\\"false\\" type=\\"button\\">
+  <!--v-if--><span class=\\"\\">x1</span>
+</button>"
+`;
