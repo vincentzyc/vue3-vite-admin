@@ -1,5 +1,4 @@
-
-import { isLink } from '../../validate/link'
+import { isLink } from '../../validate/link';
 
 test('isEmail', () => {
   expect(isLink('weixin://xxx')).toBeTruthy();

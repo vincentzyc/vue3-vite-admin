@@ -10,7 +10,7 @@
    */
 export function easeout(dom: HTMLElement, destination = 0, rate = 5): void {
   let position = dom.scrollTop;
-  if (position === destination || typeof destination !== "number" || rate === 0) {
+  if (position === destination || typeof destination !== 'number' || rate === 0) {
     return;
   }
   // 不存在原生`requestAnimationFrame`，用`setTimeout`模拟替代
@@ -34,18 +34,19 @@ export function easeout(dom: HTMLElement, destination = 0, rate = 5): void {
 
 /**
  * 滚动到指定元素
- * @param el 当前dom元素 
+ * @param el 当前dom元素
  * @param offset 元素距离顶部的偏移量
  */
 export function scrollIntoView(el: HTMLElement, offset = 200): void {
   if (!el) return;
   if (typeof offset !== 'number') return;
   const clientRect = el.getBoundingClientRect();
-  const isElementInViewport = clientRect.top >= 0 && clientRect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+  const isElementInViewport =
+    clientRect.top >= 0 && clientRect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
   if (!isElementInViewport) {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const dom = scrollTop === document.documentElement.scrollTop ? document.documentElement : document.body;
-    const destination = (scrollTop + clientRect.top - offset) > 0 ? (scrollTop + clientRect.top - offset) : 0
-    easeout(dom, destination, 10)
+    const destination = scrollTop + clientRect.top - offset > 0 ? scrollTop + clientRect.top - offset : 0;
+    easeout(dom, destination, 10);
   }
 }

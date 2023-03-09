@@ -1,4 +1,4 @@
-import { decrypt, encrypt } from "./crypto";
+import { decrypt, encrypt } from './crypto';
 
 export function setSessionStorage(key: string, value: any, encode = false): void {
   let str = window.JSON.stringify(value);
@@ -11,11 +11,11 @@ export function setSessionStorage(key: string, value: any, encode = false): void
 export function getSessionStorage(key: string, decode = false): any {
   let str: string | null;
   str = window.sessionStorage.getItem(key);
-  if (!str) return "";
+  if (!str) return '';
   if (decode) {
     str = decrypt(str);
   }
-  if (!str) return "";
+  if (!str) return '';
   try {
     return window.JSON.parse(str);
   } catch (error) {
@@ -35,11 +35,11 @@ export function setLocalStorage(key: string, value: any, encode = false): void {
 export function getLocalStorage(key: string, decode = false): any {
   let str: string | null;
   str = window.localStorage.getItem(key);
-  if (!str) return "";
+  if (!str) return '';
   if (decode) {
     str = decrypt(str);
   }
-  if (!str) return "";
+  if (!str) return '';
   try {
     return window.JSON.parse(str);
   } catch (error) {

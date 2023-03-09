@@ -1,4 +1,4 @@
-import { isNumeric, isNaN } from '../../validate/number'
+import { isNumeric, isNaN } from '../../validate/number';
 
 test('isNumeric', () => {
   expect(isNumeric('1')).toBeTruthy();

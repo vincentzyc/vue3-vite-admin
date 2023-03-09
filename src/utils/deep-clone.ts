@@ -1,4 +1,4 @@
-import { isObject, isArray } from "./validate/dataType";
+import { isObject, isArray } from './validate/dataType';
 
 type ObjectIndex = Record<string, any>;
 
@@ -11,7 +11,7 @@ export function deepClone(obj: ObjectIndex): ObjectIndex {
   let result: ObjectIndex = isArray(obj) ? [] : {};
   for (let key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      if (obj[key] === undefined || obj[key] === null) continue
+      if (obj[key] === undefined || obj[key] === null) continue;
       if (isObject(obj[key]) || isArray(obj[key])) {
         result[key] = deepClone(obj[key]);
       } else {

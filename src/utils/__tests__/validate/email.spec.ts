@@ -1,4 +1,4 @@
-import { isEmail } from '../../validate/email'
+import { isEmail } from '../../validate/email';
 
 test('isEmail', () => {
   expect(isEmail('abc@gmail.com')).toBeTruthy();

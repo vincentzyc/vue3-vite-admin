@@ -1,7 +1,7 @@
 export function setCookie(key: string, value: string, time: number): void {
   const cur = new Date();
   cur.setTime(cur.getTime() + time * 24 * 3600 * 1000);
-  document.cookie = `${key}=${encodeURIComponent(value)};expires=${time ? cur.toUTCString() : ''}}`
+  document.cookie = `${key}=${encodeURIComponent(value)};expires=${time ? cur.toUTCString() : ''}}`;
 }
 
 export function getCookie(key: string): string {

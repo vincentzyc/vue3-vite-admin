@@ -1,4 +1,4 @@
-import { isMobile } from '../../validate/mobile'
+import { isMobile } from '../../validate/mobile';
 
 test('isMobile', () => {
   expect(isMobile('13000000000')).toBeTruthy();
