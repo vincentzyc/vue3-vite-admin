@@ -1,7 +1,6 @@
 export interface CheckToken {
   id: number;
-  data: any
+  data: any;
 }
-export type Logout = any
-export type GetSideBar = any
-
+export type Logout = any;
+export type GetSideBar = any;

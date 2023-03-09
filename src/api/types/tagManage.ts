@@ -2,7 +2,7 @@ interface ListLabelChildren {
   id: number;
   name: string;
   type: string;
-  children: ListLabelChildren
+  children: ListLabelChildren;
 }
 
 export interface ListLabel {
@@ -12,6 +12,6 @@ export interface ListLabel {
   children: ListLabelChildren[];
 }
 
-export type AddLabel = boolean
-export type GetSubProductList = string[]
-export type GetSubtypeList = string[]
+export type AddLabel = boolean;
+export type GetSubProductList = string[];
+export type GetSubtypeList = string[];
