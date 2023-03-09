@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useMainStore = defineStore('main', {
   state: () => ({
@@ -6,17 +6,17 @@ export const useMainStore = defineStore('main', {
     breadcrumb: [''],
   }),
   getters: {
-    doubleCount: (state) => state.counter * 2,
+    doubleCount: state => state.counter * 2,
     doubleCountPlusOne(): number {
-      return this.doubleCount * 2 + 1
-    }
+      return this.doubleCount * 2 + 1;
+    },
   },
   actions: {
     setBreadcrumb(payload: string[]) {
       this.breadcrumb = payload;
     },
     reset() {
-      this.counter = 0
+      this.counter = 0;
     },
   },
-})
+});
