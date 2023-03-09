@@ -14,26 +14,26 @@ const config = {
 const Axios = axios.create(config);
 
 Axios.interceptors.request.use(
-  (cfg) => {
+  cfg => {
     // Do something before request is sent
     return cfg;
   },
-  (err) => {
+  err => {
     // Do something with request error
     return Promise.reject(err);
-  },
+  }
 );
 
 // Add a response interceptor
 Axios.interceptors.response.use(
-  (res) => {
+  res => {
     // Do something with response data
     return res;
   },
-  (err) => {
+  err => {
     // Do something with response error
     return Promise.reject(err);
-  },
+  }
 );
 
 export default Axios;
