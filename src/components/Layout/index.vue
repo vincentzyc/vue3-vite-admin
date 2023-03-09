@@ -8,7 +8,7 @@
       <JunboSidebar />
     </div>
     <div id="container">
-      <div style="min-width: 1160px;height:100%">
+      <div style="min-width: 1160px; height: 100%">
         <router-view v-slot="{ Component }">
           <transition name="el-fade-in" mode="out-in">
             <keep-alive :include="/keep+/">
@@ -22,27 +22,27 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, ref } from "vue";
-import JunboHeader from "./Header.vue";
-import JunboSidebar from "./Sidebar.vue";
+import { nextTick, onMounted, ref } from 'vue';
+import JunboHeader from './Header.vue';
+import JunboSidebar from './Sidebar.vue';
 
-const showSidebar = ref(true)
+const showSidebar = ref(true);
 
 const toggleSidebar = () => {
   if (showSidebar.value) {
     if (window.dom_container) window.dom_container.style.left = '0px';
-    if (window.dom_handle_sidebar) window.dom_handle_sidebar.style.left = '0px'
+    if (window.dom_handle_sidebar) window.dom_handle_sidebar.style.left = '0px';
   } else {
-    if (window.dom_container) window.dom_container.style.left = "200px";
-    if (window.dom_handle_sidebar) window.dom_handle_sidebar.style.left = "200px"
+    if (window.dom_container) window.dom_container.style.left = '200px';
+    if (window.dom_handle_sidebar) window.dom_handle_sidebar.style.left = '200px';
   }
-  showSidebar.value = !showSidebar.value
-}
+  showSidebar.value = !showSidebar.value;
+};
 onMounted(async () => {
-  await nextTick()
-  window.dom_container = document.getElementById("container");
-  window.dom_handle_sidebar = document.getElementById("handle-sidebar");
-})
+  await nextTick();
+  window.dom_container = document.getElementById('container');
+  window.dom_handle_sidebar = document.getElementById('handle-sidebar');
+});
 </script>
 <style scoped>
 .wrapper {
@@ -106,4 +106,3 @@ onMounted(async () => {
   }
 }
 </style>
-

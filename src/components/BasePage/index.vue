@@ -14,27 +14,26 @@
 </template>
 
 <script setup lang="ts">
-import { ElBreadcrumb, ElBreadcrumbItem, ElButton } from 'element-plus'
+import { ElBreadcrumb, ElBreadcrumbItem, ElButton } from 'element-plus';
 
 defineProps({
   title: {
     type: String,
-    default: ""
+    default: '',
   },
   paths: {
     type: Array,
     default() {
       return [];
-    }
+    },
   },
   showBack: {
     type: Boolean,
-    default: false
-  }
-})
+    default: false,
+  },
+});
 
-defineEmits(['handle-back'])
-
+defineEmits(['handle-back']);
 </script>
 
 <style scoped>

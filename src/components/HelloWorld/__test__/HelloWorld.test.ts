@@ -1,9 +1,9 @@
-import { mount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld/HelloWorld.vue'
-import { ElButton } from 'element-plus' 
+import { mount } from '@vue/test-utils';
+import HelloWorld from '@/components/HelloWorld/HelloWorld.vue';
+import { ElButton } from 'element-plus';
 
 test('hello world mount', async () => {
-  expect(HelloWorld).toBeTruthy()
+  expect(HelloWorld).toBeTruthy();
 
   const wrapper = mount(HelloWorld, {
     props: {
@@ -11,19 +11,19 @@ test('hello world mount', async () => {
     },
     global: {
       components: {
-        ElButton
-      }
-    }
-  })
+        ElButton,
+      },
+    },
+  });
 
-  expect(wrapper.text()).toContain('4 x 2 = 8')
-  expect(wrapper.html()).toMatchSnapshot()
+  expect(wrapper.text()).toContain('4 x 2 = 8');
+  expect(wrapper.html()).toMatchSnapshot();
 
-  await wrapper.get('button').trigger('click')
+  await wrapper.get('button').trigger('click');
 
-  expect(wrapper.text()).toContain('4 x 3 = 12')
+  expect(wrapper.text()).toContain('4 x 3 = 12');
 
-  await wrapper.get('button').trigger('click')
+  await wrapper.get('button').trigger('click');
 
-  expect(wrapper.text()).toContain('4 x 4 = 16')
-})
+  expect(wrapper.text()).toContain('4 x 4 = 16');
+});

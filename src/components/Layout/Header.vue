@@ -21,17 +21,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { CommonApi, getLoginUrl } from "@/api";
-import { getLocalStorage } from "@/utils/storage";
-import { ArrowDown } from '@element-plus/icons-vue'
-import { USERINFO } from "@/assets/js/storage-keys";
+import { ref } from 'vue';
+import { CommonApi, getLoginUrl } from '@/api';
+import { getLocalStorage } from '@/utils/storage';
+import { ArrowDown } from '@element-plus/icons-vue';
+import { USERINFO } from '@/assets/js/storage-keys';
 
-const username = ref("Hello World");
+const username = ref('Hello World');
 
 const getUserName = () => {
   let userInfo = getLocalStorage(USERINFO, true);
-  username.value = userInfo.username || "Hello World";
+  username.value = userInfo.username || 'Hello World';
 };
 
 const changePass = async () => {
@@ -45,10 +45,10 @@ const loginout = async () => {
 };
 const handleCommand = (command: string) => {
   switch (command) {
-    case "changePass":
+    case 'changePass':
       changePass();
       break;
-    case "loginout":
+    case 'loginout':
       loginout();
       break;
     default:
