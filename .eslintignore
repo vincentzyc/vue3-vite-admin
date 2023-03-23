@@ -1,0 +1,11 @@
+node_modules/**
+dist/**
+coverage/**
+build/**
+.vscode/**
+.eslintrc.*
+**/*.json
+**/*.min.js
+**/*.spec.*
+**/*.test.*
+index.html
