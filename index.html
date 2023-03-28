@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="https://cdn.lipush.com/junbo/img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.lipush.com/junbo/css/base@1.0.0.css" />
+    <%- injectCss %>
+    <title>管理平台</title>
+    <!-- Matomo -->
+    <script type="text/javascript">
+      function isProduction() {
+        var locationOrigin = window.location.origin;
+        if (/^((ht|f)tps?:\/\/)?[\w-]+(\.?[\w-]+)+:\d{1,6}\/?$/.test(locationOrigin)) return false;
+        if (window.location.origin.includes('test-')) return false;
+        return true;
+      }
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function () {
+        var u = '//cdn.lipush.com/junbo/js/';
+        var ou = '//tj.liulianglf.com/';
+        _paq.push(['setTrackerUrl', ou + 'matomo.php']);
+        isProduction() ? _paq.push(['setSiteId', '1']) : _paq.push(['setSiteId', '1']);
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="https://cdn.lipush.com/junbo/img/favicon.ico">
-  <link rel="stylesheet" href="https://cdn.lipush.com/junbo/css/base@1.0.0.css">
-  <%- injectCss %>
-  <title>管理平台</title>
-  <!-- Matomo -->
-  <script type="text/javascript">
-    function isProduction() {
-      var locationOrigin = window.location.origin
-      if (/^((ht|f)tps?:\/\/)?[\w-]+(\.?[\w-]+)+:\d{1,6}\/?$/.test(locationOrigin)) return false
-      if (window.location.origin.includes('test-')) return false;
-      return true
-    }
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-      var u = "//cdn.lipush.com/junbo/js/";
-      var ou = "//tj.liulianglf.com/";
-      _paq.push(['setTrackerUrl', ou + 'matomo.php']);
-      isProduction() ? _paq.push(['setSiteId', '1']) : _paq.push(['setSiteId', '1']);
-      var d = document,
-        g = d.createElement('script'),
-        s = d.getElementsByTagName('script')[0];
-      g.type = 'text/javascript';
-      g.async = true;
-      g.src = u + 'matomo.js';
-      s.parentNode.insertBefore(g, s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
-</head>
-
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
-  <%- injectScript %>
-</body>
-
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <%- injectScript %>
+  </body>
 </html>
