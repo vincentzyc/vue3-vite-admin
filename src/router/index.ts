@@ -1,20 +1,21 @@
-import { USERINFO } from '@/assets/js/storage-keys';
-import { easeout } from '@/utils/dom';
-import { setSessionStorage } from '@/utils/storage';
+// import { USERINFO } from '@/assets/js/storage-keys';
+// import { easeout } from '@/utils/dom';
+// import { setSessionStorage } from '@/utils/storage';
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
-const checkLogin = () => (window.location.href.includes('token=') ? '/login' : '/welcome');
+// const checkLogin = () => (window.location.href.includes('token=') ? '/login' : '/welcome');
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: checkLogin(),
+    // redirect: checkLogin(),
+    redirect: '/home',
   },
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/pages/Login.vue'),
-  },
+  // {
+  //   path: '/login',
+  //   name: 'login',
+  //   component: () => import('@/pages/Login.vue'),
+  // },
   {
     path: '/home',
     name: 'Layout',
@@ -44,27 +45,27 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
-  if (to.name === 'login') {
-    next();
-    return;
-  }
-  if (localStorage.getItem(USERINFO)) {
-    next();
-  } else {
-    setSessionStorage('backUrl', window.location.href);
-    next('/login');
-  }
-});
+// router.beforeEach((to, from, next) => {
+//   if (to.name === 'login') {
+//     next();
+//     return;
+//   }
+//   if (localStorage.getItem(USERINFO)) {
+//     next();
+//   } else {
+//     setSessionStorage('backUrl', window.location.href);
+//     next('/login');
+//   }
+// });
 
-router.afterEach((to, from) => {
-  if (to.name === from.name) return;
-  if (window.dom_container) {
-    easeout(window.dom_container, 0, 5);
-  }
-  const _paq = window['_paq'] || [];
-  _paq.push(['setCustomUrl', to.path]);
-  _paq.push(['trackPageView']);
-});
+// router.afterEach((to, from) => {
+//   if (to.name === from.name) return;
+//   if (window.dom_container) {
+//     easeout(window.dom_container, 0, 5);
+//   }
+//   const _paq = window['_paq'] || [];
+//   _paq.push(['setCustomUrl', to.path]);
+//   _paq.push(['trackPageView']);
+// });
 
 export default router;
