@@ -103,7 +103,7 @@ const allList = [
 ];
 
 const showCustomColumn = ref(false);
-const formData = reactive({
+let formData = reactive({
   filterStartTime: '2019-01-01', //设置默认值
   filterEndTime: '2019-01-07', //设置默认值
   filterStartAndEndTime: ['2019-01-01', '2019-01-07'], //设置默认值

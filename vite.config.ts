@@ -2,7 +2,7 @@
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import AutoImport from 'unplugin-auto-import/vite';
+// import AutoImport from 'unplugin-auto-import/vite';
 import externalGlobals from 'rollup-plugin-external-globals';
 import { createHtmlPlugin } from 'vite-plugin-html';
 
@@ -20,15 +20,15 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    AutoImport({
-      include: [
-        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        /\.vue$/,
-        /\.vue\?vue/, // .vue
-        /\.md$/, // .md
-      ],
-      imports: ['vue'],
-    }),
+    // AutoImport({
+    //   include: [
+    //     /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+    //     /\.vue$/,
+    //     /\.vue\?vue/, // .vue
+    //     /\.md$/, // .md
+    //   ],
+    //   imports: ['vue'],
+    // }),
     createHtmlPlugin({
       minify: true,
       inject: {
