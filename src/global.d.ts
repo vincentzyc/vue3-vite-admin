@@ -1,6 +1,7 @@
 declare module 'element-plus/dist/locale/zh-cn.mjs';
 
-// declare const murmur: string
+declare module 'junbo-ui';
+
 interface Window {
   _paq: any; // matomo
   fullLoading: any;
