@@ -8,7 +8,7 @@
       @selection-change="handleSelectionChange"
       class="ele-easy-table-demo"
     >
-      <template #slot2="{ row }">
+      <template #slot2="{ row }: { row: any }">
         <el-dropdown :hide-on-click="false" @command="handleView">
           <span class="el-dropdown-link" style="display: flex; align-items: center">
             <el-button type="primary" link>操作</el-button>
