@@ -13,6 +13,9 @@ dependencies:
   element-plus:
     specifier: 2.2.32
     version: 2.2.32(vue@3.2.47)
+  junbo-ui:
+    specifier: ^2.0.3
+    version: 2.0.3
   pinia:
     specifier: 2.0.30
     version: 2.0.30(typescript@4.9.3)(vue@3.2.47)
@@ -299,6 +302,14 @@ packages:
 
   /@element-plus/icons-vue@2.0.10(vue@3.2.47):
     resolution: {integrity: sha512-ygEZ1mwPjcPo/OulhzLE7mtDrQBWI8vZzEWSNB2W/RNCRjoQGwbaK4N8lV4rid7Ts4qvySU3njMN7YCiSlSaTQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.47
+    dev: false
+
+  /@element-plus/icons-vue@2.1.0(vue@3.2.47):
+    resolution: {integrity: sha512-PSBn3elNoanENc1vnCfh+3WA9fimRC7n+fWkf3rE5jvv+aBohNHABC/KAR5KWPecxWxDTVT1ERpRbOMRcOV/vA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -1700,6 +1711,31 @@ packages:
       - '@vue/composition-api'
     dev: false
 
+  /element-plus@2.3.1(vue@3.2.47):
+    resolution: {integrity: sha512-IBS7ic1mRyDXpOreRkredV4ByZSuax5HPb0zNOHm4qwKC4wm927yQv+Is0JbzxPzCW5zWaV4PLy9/Gl3E3v59w==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@ctrl/tinycolor': 3.6.0
+      '@element-plus/icons-vue': 2.0.10(vue@3.2.47)
+      '@floating-ui/dom': 1.2.5
+      '@popperjs/core': /@sxzz/popperjs-es@2.11.7
+      '@types/lodash': 4.14.192
+      '@types/lodash-es': 4.17.7
+      '@vueuse/core': 9.13.0(vue@3.2.47)
+      async-validator: 4.2.5
+      dayjs: 1.11.7
+      escape-html: 1.0.3
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.3(@types/lodash-es@4.17.7)(lodash-es@4.17.21)(lodash@4.17.21)
+      memoize-one: 6.0.0
+      normalize-wheel-es: 1.2.0
+      vue: 3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
+
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: true
@@ -2527,6 +2563,18 @@ packages:
     optionalDependencies:
       graceful-fs: 4.2.11
     dev: true
+
+  /junbo-ui@2.0.3:
+    resolution: {integrity: sha512-EiPx/slWMBlVsSHgEX8/3N9o5cZMASFQ4+eqoMkHq9HsRUHhYmBVmppkn3Xuu2C4jbNeEtFKv8FeC/krTXuGAg==}
+    dependencies:
+      '@element-plus/icons-vue': 2.1.0(vue@3.2.47)
+      element-plus: 2.3.1(vue@3.2.47)
+      vue: 3.2.47
+      vue-router: 4.1.6(vue@3.2.47)
+      vuedraggable: 4.1.0(vue@3.2.47)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   /klona@2.0.6:
     resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
