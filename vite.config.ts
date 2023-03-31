@@ -35,7 +35,7 @@ export default defineConfig({
         data: isProduction
           ? {
               injectCss: `<link rel="stylesheet" href="https://cdn.lipush.com/other/css/element-plus@2.2.32.css">`,
-              injectScript: `<script src="https://cdn.lipush.com/other/js/vue@3.2.47vue-router@4.1.6pinia@2.0.32.js"></script>
+              injectScript: `<script src="https://cdn.lipush.com/other/js/vue@3.2.47vue-router@4.1.6pinia@2.0.33.js"></script>
           <script src="https://cdn.lipush.com/other/js/element-plus@2.2.32.js"></script>
           <script src="https://cdn.lipush.com/other/js/axios@1.3.3.js"></script>
           `,
