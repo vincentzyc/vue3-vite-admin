@@ -20,6 +20,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    // AutoImport 引入cdn时不会把vue转化成全局对象Vue，暂不使用
     // AutoImport({
     //   include: [
     //     /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
