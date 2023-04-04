@@ -1,6 +1,6 @@
 <template>
   <div>
-    <JunboTable
+    <EleEasyTable
       :form="form"
       :table="table"
       v-model:formData="formData"
@@ -29,8 +29,8 @@
           <span style="margin-right: 8px">自定义标题</span>
         </el-tooltip>
       </template>
-    </JunboTable>
-    <JunboCustomColumn
+    </EleEasyTable>
+    <CustomColumn
       localName="JUNBOTABLE_CUSTOM_COLUMNS"
       v-model:columns="table.columns"
       v-model:show="showCustomColumn"
