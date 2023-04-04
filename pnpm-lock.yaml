@@ -10,12 +10,12 @@ dependencies:
   crypto-js:
     specifier: 4.1.1
     version: 4.1.1
+  ele-easy-table-next:
+    specifier: ^1.1.1
+    version: 1.1.1
   element-plus:
     specifier: 2.2.32
     version: 2.2.32(vue@3.2.47)
-  junbo-ui:
-    specifier: ^2.0.3
-    version: 2.0.3
   pinia:
     specifier: 2.0.30
     version: 2.0.30(typescript@4.9.3)(vue@3.2.47)
@@ -1462,6 +1462,11 @@ packages:
       is-what: 3.14.1
     dev: true
 
+  /core-js@3.29.1:
+    resolution: {integrity: sha512-+jwgnhg6cQxKYIIjGtAHq2nwUOolo9eoFZ4sHfUH09BLXBgxnH4gA0zEd+t+BO2cNB8idaBtZFcFTRjQJRJmAw==}
+    requiresBuild: true
+    dev: false
+
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
@@ -1681,6 +1686,18 @@ packages:
     dependencies:
       jake: 10.8.5
     dev: true
+
+  /ele-easy-table-next@1.1.1:
+    resolution: {integrity: sha512-qteqbNPwsKz/MRRBMz/VtBvqv6jIG34zIMr5wO0dfmRjx7CfGPAnkamAxxbLFjgP3PGjJQw8OuE05usk8HMK+A==}
+    dependencies:
+      '@element-plus/icons-vue': 2.1.0(vue@3.2.47)
+      core-js: 3.29.1
+      element-plus: 2.3.1(vue@3.2.47)
+      vue: 3.2.47
+      vuedraggable: 4.1.0(vue@3.2.47)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   /electron-to-chromium@1.4.344:
     resolution: {integrity: sha512-m4HjHLGMPJddM0FZmPxZkk6whzeqK/B3zkzAB7KAopv2TkePzXQcM8aOfDS+1NOjD44lgA89yHRkNAQ/5uCQXQ==}
@@ -2563,18 +2580,6 @@ packages:
     optionalDependencies:
       graceful-fs: 4.2.11
     dev: true
-
-  /junbo-ui@2.0.3:
-    resolution: {integrity: sha512-EiPx/slWMBlVsSHgEX8/3N9o5cZMASFQ4+eqoMkHq9HsRUHhYmBVmppkn3Xuu2C4jbNeEtFKv8FeC/krTXuGAg==}
-    dependencies:
-      '@element-plus/icons-vue': 2.1.0(vue@3.2.47)
-      element-plus: 2.3.1(vue@3.2.47)
-      vue: 3.2.47
-      vue-router: 4.1.6(vue@3.2.47)
-      vuedraggable: 4.1.0(vue@3.2.47)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-    dev: false
 
   /klona@2.0.6:
     resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
