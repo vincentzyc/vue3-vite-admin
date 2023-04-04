@@ -6,7 +6,7 @@ import ElementPlus from 'element-plus';
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 import { createPinia } from 'pinia';
 import '@/assets/css/main.less';
-import JunboUi from 'junbo-ui';
+import EleEasyTableNext from 'ele-easy-table-next';
 
 if (process.env.NODE_ENV !== 'production') {
   import('element-plus/dist/index.css');
@@ -19,7 +19,7 @@ app.use(createPinia());
 app.use(ElementPlus, {
   locale: zhCn,
 });
-app.use(JunboUi);
+app.use(EleEasyTableNext);
 
 app.config.globalProperties.$axios = Axios;
 
