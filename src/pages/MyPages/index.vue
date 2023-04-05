@@ -100,6 +100,11 @@ const allList = [
     data2: '第10101010',
     data5: 'kkk',
   },
+  {
+    data1: '111111',
+    data2: '第11111111',
+    data5: 'lll',
+  },
 ];
 
 const showCustomColumn = ref(false);
@@ -109,7 +114,7 @@ let formData = reactive({
   filterStartAndEndTime: ['2019-01-01', '2019-01-07'], //设置默认值
   pageIndex: 1,
   pageSize: 10,
-  totalCount: 11,
+  totalCount: allList.length,
 });
 const defaultColumns = ref(['data1', 'data3']);
 const baseColumns = ref<any[]>([
