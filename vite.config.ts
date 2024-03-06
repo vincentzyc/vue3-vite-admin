@@ -39,6 +39,7 @@ export default defineConfig({
               injectScript: `<script src="https://cdn.lipush.com/other/js/vue@3.2.47vue-router@4.1.6pinia@2.0.33.js"></script>
           <script src="https://cdn.lipush.com/other/js/element-plus@2.2.32.js"></script>
           <script src="https://cdn.lipush.com/other/js/axios@1.3.3.js"></script>
+          <script src="https://cdn.lipush.com/other/js/sortablejs@1.15.0vuedraggable@4.1.0.js"></script>
           `,
             }
           : {
@@ -50,7 +51,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['vue', 'pinia', 'vue-router', 'element-plus', 'axios', 'vue-demi'],
+      external: ['vue', 'pinia', 'vue-router', 'element-plus', 'axios', 'vuedraggable', 'vue-demi'],
       plugins: [
         externalGlobals({
           vue: 'Vue',
@@ -58,6 +59,7 @@ export default defineConfig({
           'vue-router': 'VueRouter',
           'element-plus': 'ElementPlus',
           axios: 'axios',
+          vuedraggable: 'vuedraggable',
           'vue-demi': 'VueDemi',
         }),
       ],
