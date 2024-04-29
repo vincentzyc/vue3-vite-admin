@@ -1,8 +1,3 @@
 {
-  "recommendations": [
-    "Vue.volar",
-    "antfu.vite",
-    "zixuanchen.vitest-explorer",
-    "esbenp.prettier-vscode"
-  ]
+  "recommendations": ["Vue.volar", "antfu.vite", "vitest.explorer", "esbenp.prettier-vscode"]
 }
